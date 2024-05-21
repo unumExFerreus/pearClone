@@ -7,13 +7,13 @@ const Footer = () => {
         <div className="flex justify-between pt-6 pb-4">
           <span>
             More ways to shop: Find an Apple Store or other retailer near you.
-            Or call 1-800-MY-APPLE.
+            Or call 0-000-00-000.
           </span>
         </div>
 
         <div className="flex justify-between border-t-[1px] border-[#535355] py-4">
           <div className="flex">
-            <span>Copyright © 2024 Me. All rights reserved.</span>
+            <span>All rights reserved.</span>
           </div>
 
           <div>
