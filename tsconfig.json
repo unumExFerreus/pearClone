@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/model/IPhone.jsx", "components/model/Model3D.jsx", "components/model/ModelView.jsx", "components/model/Lights.jsx", "utils/animations.jsx"],
   "exclude": ["node_modules"]
 }

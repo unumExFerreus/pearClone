@@ -7,14 +7,15 @@ import { watch } from "../../public/index";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {
+  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to("#title", {
       translateY: "0px",
       opacity: 1,
-      duration: 0.5,
+      ease: "power2.out",
+      duration: 0.8,
       delay: 0.5,
       scrollTrigger: {
         trigger: "#trigger",
@@ -25,7 +26,8 @@ const Highlights = () => {
     gsap.to(".link", {
       translateY: "0px",
       opacity: 1,
-      duration: 0.5,
+      ease: "power2.out",
+      duration: 0.8,
       delay: 0.5,
       stagger: 0.25,
       scrollTrigger: {
@@ -35,22 +37,19 @@ const Highlights = () => {
       },
     });
   }, []);
-
+  
   return (
-    <div
-      id="trigger"
-      className="w-full h-auto bg-[#101010]"
-    >
-      <div className="w-[100dw] md:mx-[45px] xl:mx-[17%] 2xl:mx-[25%] 3xl:mx-[33%] flex flex-col md:flex-row md:justify-between pt-[100px] xl:pt-[200px] pb-[38px] md:pb-[40px]">
+    <div id="trigger" className="w-full h-auto bg-[#101010]">
+      <div className="w-full xs:px-[16px] md:px-[45px] xl:px-[17%] 2xl:px-[25%] 3xl:px[33%] flex flex-col md:flex-row md:justify-between pt-[100px] xl:pt-[200px] pb-[38px] md:pb-[40px]">
         <h2
           id="title"
-          className="text-3xl mx-[5%] md:mx-0 pb-4 md:pb-0 md:text-6xl font-[1000] text-[#868686] opacity-0 translate-y-[30px]"
+          className="text-3xl md:mx-0 pb-4 md:pb-0 md:text-6xl font-[1000] text-[#868686] opacity-0 translate-y-[30px]"
         >
           Get the highlights.
         </h2>
 
         <div className="flex flex-col md:flex-row md:items-end">
-          <span className="flex pr-7 link opacity-0 translate-y-[30px] mx-[5%] md:mx-0">
+          <span className="flex pr-7 link opacity-0 translate-y-[30px] md:mx-0">
             <span className="mr-2 text-lg md:text-xl text-[#2997ff]">
               Watch the film
             </span>
@@ -60,7 +59,7 @@ const Highlights = () => {
               className="h-fit mt-auto mb-[0.4rem] md:mb-[.375rem] size-4 md:size-5"
             />
           </span>
-          <span className="flex link opacity-0 mx-[5%] md:mx-0">
+          <span className="flex link opacity-0 translate-y-[30px] md:mx-0">
             <span className="pr-2 text-lg md:text-xl text-[#2997ff]">
               Watch the event
             </span>

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "@/components/navigation/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const SF = localFont({ src: "../public/fonts/SF-Pro-Display-Light.otf" });
 
@@ -22,6 +23,9 @@ export default function RootLayout({
           <Navbar />
         </header>
         <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

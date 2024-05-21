@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import { Logo, Bag, Search, Right } from "../../public/index";
 
-import { navLists } from "@/db/index";
+import { navLists } from "@/utils/index";
 
 const Navbar = () => {
   // open menu
@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav className="w-full h-[44px] z-50 relative">
       <div className="flex justify-center items-center w-full max-w-[1024px] h-[48px] lg:h-[44px] mx-auto px-3 lg:px-6 relative">
         <ul className="w-full flex flex-1 justify-between items-center text-xs font-[300]">
-          <Link className="h-full px-2" href={""}>
+          <Link className="h-full px-2" href={"/"}>
             <Image
               src={Logo}
               alt="Apple logo"
@@ -36,15 +36,19 @@ const Navbar = () => {
           </Link>
           {navLists.map((nav: string, index: number) => (
             <li key={index}>
-              <span className="hidden lg:flex px-2 text-[#E8E8ED]/80 hover:text-[#E8E8ED] duration-300 cursor-pointer">{nav}</span>
+              <span className="hidden lg:flex px-2 text-[#E8E8ED]/80 hover:text-[#E8E8ED] duration-300 cursor-pointer">
+                {nav}
+              </span>
             </li>
           ))}
-          <Link className="h-full px-1" href={""}>
+
+          <Link className="h-full px-1" href={"/"}>
             <Image src={Search} alt="Search" className="size-4" />
           </Link>
-          <Link className="h-full px-1" href={""}>
+          <Link className="h-full px-1" href={"/"}>
             <Image src={Bag} alt="Bag" className="size-4" />
           </Link>
+
           {/* mobile menu */}
           <button
             aria-label="Menu button"
@@ -58,8 +62,8 @@ const Navbar = () => {
               viewBox="0 0 100 100"
             >
               <rect
-                className={`translate-y-[33%] transition-all duration-[150ms] ease-in ${
-                  isMenuOpen ? "!translate-y-[50%] invisible" : "delay-[150ms]"
+                className={`translate-y-[33%] transition-all duration-[100ms] ease-in ${
+                  isMenuOpen ? "!translate-y-[50%] invisible" : "delay-[100ms]"
                 }`}
                 width={78}
                 height={5}
@@ -67,8 +71,8 @@ const Navbar = () => {
                 rx={4}
               ></rect>
               <rect
-                className={`translate-y-[67%] transition-all duration-[150ms] ease-in ${
-                  isMenuOpen ? "!translate-y-[50%] invisible" : "delay-[150ms]"
+                className={`translate-y-[67%] transition-all duration-[100ms] ease-in ${
+                  isMenuOpen ? "!translate-y-[50%] invisible" : "delay-[100ms]"
                 }`}
                 width={78}
                 height={5}
@@ -77,9 +81,9 @@ const Navbar = () => {
               ></rect>
 
               <rect
-                className={`absolute translate-y-[50%] transition-all duration-[150ms] ease-in ${
+                className={`absolute translate-y-[50%] transition-all duration-[100ms] ease-in ${
                   isMenuOpen
-                    ? "rotate-45 visible delay-[150ms] origin-top"
+                    ? "rotate-45 visible delay-[100ms] origin-top"
                     : "invisible"
                 }`}
                 width={78}
@@ -88,9 +92,9 @@ const Navbar = () => {
                 rx={4}
               ></rect>
               <rect
-                className={`absolute translate-y-[50%] transition-all duration-[150ms] ease-in ${
+                className={`absolute translate-y-[50%] transition-all duration-[100ms] ease-in ${
                   isMenuOpen
-                    ? "-rotate-45 visible delay-[150ms] origin-top"
+                    ? "-rotate-45 visible delay-[100ms] origin-top"
                     : "invisible"
                 }`}
                 width={78}
@@ -100,6 +104,7 @@ const Navbar = () => {
               ></rect>
             </svg>
           </button>
+
           <div
             className={`absolute inset-0 max-w-[100dvw] h-[100dvh] bg-[#161616] transition-all duration-[700ms] ease-in ${
               isMenuOpen

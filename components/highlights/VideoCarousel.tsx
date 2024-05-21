@@ -1,4 +1,4 @@
-import { hightlightsSlides } from "@/db";
+import { hightlightsSlides } from "@/utils";
 import { useEffect, useRef, useState } from "react";
 import { pauseImg, playImg, replayImg } from "../../public/index";
 import Image from "next/image";
@@ -6,13 +6,12 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
 
 const VideoCarousel: React.FC = () => {
   const videoRef = useRef<any>([]);
   const videoSpanRef = useRef<HTMLSpanElement[]>([]);
   const videoDivRef = useRef<HTMLSpanElement[]>([]);
-
+  
   const [video, setVideo] = useState<{
     isEnd: boolean;
     startPlay: boolean;
@@ -26,11 +25,12 @@ const VideoCarousel: React.FC = () => {
     isLastVideo: false,
     isPlaying: false,
   });
-
+  
   const [loadedData, setLoadedData] = useState<HTMLVideoElement[]>([]);
-
+  
   const { isEnd, startPlay, videoId, isLastVideo, isPlaying } = video;
-
+  
+  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to("#slider", {
       transform: `translateX(${-100 * videoId}%)`,
@@ -149,7 +149,7 @@ const VideoCarousel: React.FC = () => {
     setLoadedData((pre) => [...pre, e]);
   return (
     <>
-      <div className="w-full max-w-[100dw] h-[560px] md:h-[680px] overflow-x-scroll no-scrollbar relative  pointer-events-none select-none">
+      <div className="w-full max-w-[100dw] h-[560px] md:h-[680px] overflow-x-scroll no-scrollbar relative">
         <div className="flex items-center xl:mx-[calc(17%-45px)] 2xl:mx-[calc(25%-45px)] 3xl:mx-[calc(34%-45px)]">
           {hightlightsSlides.map((list: any, i: number) => (
             <div
@@ -198,8 +198,8 @@ const VideoCarousel: React.FC = () => {
         </div>
       </div>
 
-      <div className="sticky z-10 bottom-10 pt-10 pb-28 md:py-20">
-        <div className="relative flex justify-center select-none">
+      <div className="w-full sticky z-10 bottom-0 pt-10 pb-28 md:py-10 select-none">
+        <div className="relative flex justify-center">
           <div className="flex justify-center items-center py-5 bg-[#333335] backdrop-blur rounded-full min-w-[150px] min-h-[56px]">
             {videoRef.current.map((_: any, i: number) => (
               <span

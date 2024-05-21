@@ -23,7 +23,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="w-full h-[calc(100dvh-48px)] md:h-[calc(100dvh-44px)] relative SF">
+    <div className="w-full h-[calc(100dvh-48px)] md:h-[calc(100dvh-44px)] relative">
       <div className="absolute flex justify-center items-center w-full py-3 md:py-5 bg-[#1d1d1d]">
         <h2 className="max-w-[250px] md:max-w-[400px] text-[#f5f5f5] text-center text-2xl text-[17px] leading-[1.25] font-normal tracking-[0.03em]">
           Get $170–$630 in credit toward iPhone 15 Pro when you trade in iPhone

@@ -1,6 +1,9 @@
 import Hero from "@/components/hero/Hero";
 import Highlights from "@/components/highlights/Highlights";
-import Model3D from "@/components/model/Model3D";
+import dynamic from "next/dynamic";
+const Model3D = dynamic(() => import("../components/model/Model3D"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -11,7 +14,7 @@ export default function Home() {
       <section aria-label="Highlights">
         <Highlights />
       </section>
-      <section aria-label="3d model">
+      <section id="touchTrigger" aria-label="3d model">
         <Model3D />
       </section>
     </>
