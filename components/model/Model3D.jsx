@@ -72,7 +72,7 @@ const Model3D = () => {
     <div className="w-full h-auto bg-black">
       <h1
         id="heading"
-        className="w-[100dw] xs:px-[16px] md:px-[45px] xl:px-[17%] 2xl:px-[25%] 3xl:px[33%] py-[100px] md:pt-[200px] text-3xl pb-4 md:pb-0 md:text-6xl font-[1000] text-[#868686] opacity-0 translate-y-[30px]"
+        className="w-[100dw] px-[16px] md:px-[45px] xl:px-[17%] 2xl:px-[25%] 3xl:px[33%] py-[100px] md:pt-[200px] text-3xl pb-4 md:pb-0 md:text-6xl font-[1000] text-[#868686] opacity-0 translate-y-[30px]"
       >
         Take a closer look.
       </h1>
@@ -100,7 +100,7 @@ const Model3D = () => {
           />
 
           <Canvas
-            className="w-full h-full"
+            className="md:w-full md:h-full"
             style={{
               position: "fixed",
               top: 0,
