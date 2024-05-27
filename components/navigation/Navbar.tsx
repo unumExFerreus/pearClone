@@ -37,7 +37,7 @@ const Navbar = () => {
           {navLists.map((nav: string, index: number) => (
             <li key={index}>
               <span className="hidden lg:flex px-2 text-[#E8E8ED]/80 hover:text-[#E8E8ED] duration-300 cursor-pointer">
-                {nav}
+                <Link href={"/"}>{nav}</Link>
               </span>
             </li>
           ))}
@@ -125,7 +125,7 @@ const Navbar = () => {
                         : "translate-y-0 duration-500 opacity-0"
                     }`}
                   >
-                    {nav}
+                    <Link href={"/"}>{nav}</Link>
                   </span>
                   <Image
                     className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 size-4 duration-300"

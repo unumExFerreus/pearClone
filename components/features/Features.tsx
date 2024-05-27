@@ -108,7 +108,7 @@ const Features = () => {
             </div>
           </div>
 
-          <div className="flex-col md:flex md:flex-row justify-around items-center text-2xl py-[30px] md:py-[60px]">
+          <div className="flex-col md:flex md:flex-row justify-around items-center text-2xl text-[21px] font-bold py-[30px] md:py-[60px]">
             <p
               id="featuresDetails"
               className="text-[#868686] w-full md:max-w-[33%] px-[45px] md:px-[0px] pb-5 opacity-0 translate-y-[30px]"

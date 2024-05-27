@@ -30,7 +30,7 @@ const Hero = () => {
           11 or higher
         </h2>
       </div>
-      
+
       <div className="flex flex-col justify-center items-center w-full h-full relative">
         <h1
           id="heroText"
@@ -57,14 +57,14 @@ const Hero = () => {
             autoPlay
             muted
             playsInline={true}
-          ></video>
+          />
           <video
             className="hidden md:block w-[65%] mb-0"
             src="/videos/hero.mp4"
             autoPlay
             muted
             playsInline={true}
-          ></video>
+          />
         </div>
 
         <div className="absolute bottom-0 flex flex-col justify-end items-center mb-6 md:mb-20">

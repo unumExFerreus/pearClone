@@ -12,6 +12,8 @@ import blackImg from "./assets/images/black.jpg";
 import blueImg from "./assets/images/blue.jpg";
 import explore1 from "./assets/images/explore1.jpg";
 import explore2 from "./assets/images/explore2.jpg";
+import chip from "./assets/images/chip.jpeg";
+import frame from "./assets/images/frame.png";
 
 export {
   Logo,
@@ -28,4 +30,6 @@ export {
   yellowImg,
   explore1,
   explore2,
+  chip,
+  frame,
 };
