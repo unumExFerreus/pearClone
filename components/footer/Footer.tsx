@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between border-t-[1px] border-[#535355] py-4">
           <div className="flex mb-2 md:mb-0">
-            <span>Copyright © 2024. All rights reserved.</span>
+            <span>All rights reserved.</span>
           </div>
 
           <div>
