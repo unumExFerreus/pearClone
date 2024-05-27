@@ -4,43 +4,33 @@ import Image from "next/image";
 import VideoCarousel from "./VideoCarousel";
 import { watch } from "../../public/index";
 
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+
+import { animationTitle } from "@/utils/animations";
 
 const Highlights = () => {
-  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-    gsap.to("#title", {
-      translateY: "0px",
+    animationTitle("#title", {
+      y: 0,
       opacity: 1,
-      ease: "power2.out",
       duration: 0.8,
       delay: 0.5,
-      scrollTrigger: {
-        trigger: "#trigger",
-        start: "top 80%",
-        end: "bottom 100%",
-      },
+      ease: "power2.out",
     });
-    gsap.to(".link", {
-      translateY: "0px",
+
+    animationTitle(".link", {
+      y: 0,
       opacity: 1,
-      ease: "power2.out",
       duration: 0.8,
       delay: 0.5,
+      ease: "power2.out",
       stagger: 0.25,
-      scrollTrigger: {
-        trigger: "#trigger",
-        start: "top 80%",
-        end: "bottom 100%",
-      },
     });
   }, []);
-  
+
   return (
-    <div id="trigger" className="w-full h-auto bg-[#101010]">
-      <div className="w-full px-[16px] md:px-[45px] xl:px-[17%] 2xl:px-[25%] 3xl:px[33%] flex flex-col md:flex-row md:justify-between pt-[100px] xl:pt-[200px] pb-[38px] md:pb-[40px]">
+    <div className="w-full h-auto bg-[#101010]">
+      <div className="w-full container flex flex-col md:flex-row md:justify-between pt-[100px] xl:pt-[200px] pb-[38px] md:pb-[40px]">
         <h2
           id="title"
           className="text-3xl md:mx-0 pb-4 md:pb-0 md:text-6xl font-[1000] text-[#868686] opacity-0 translate-y-[30px]"

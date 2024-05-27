@@ -18,6 +18,15 @@ const config: Config = {
         "3xl": "3840px",
       },
     },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        md: '2.813rem',
+        xl: '17%',
+        '2xl': '25%',
+        '3xl': '33%',
+      },
+    },
   },
   plugins: [],
 };

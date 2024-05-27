@@ -10,16 +10,6 @@ import {
 import * as THREE from "three";
 import Loader from "./Loader";
 
-// interface modelType {
-//   index: number;
-//   groupRef: any;
-//   controlRef: any;
-//   gsapType: string;
-//   setLargeRotation: any;
-//   size: string;
-//   item: any;
-// }
-
 const ModelView = ({
   index,
   groupRef,
@@ -33,7 +23,7 @@ const ModelView = ({
     <View
       index={index}
       id={gsapType}
-      className={`w-[85%] mx-[7.5%] md:w-full md:mx-0 h-full absolute ${index === 2 ? "right-[-85%]" : ""}`}
+      className={`w-[85%] mx-[7.5%] md:w-full md:mx-0 h-full absolute ${index === 2 ? "right-[-85%] md:right-[-100%]" : ""}`}
     >
       {/* Ambient light */}
       <ambientLight intensity={1} />

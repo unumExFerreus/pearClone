@@ -11,7 +11,7 @@ const VideoCarousel: React.FC = () => {
   const videoRef = useRef<any>([]);
   const videoSpanRef = useRef<HTMLSpanElement[]>([]);
   const videoDivRef = useRef<HTMLSpanElement[]>([]);
-  
+
   const [video, setVideo] = useState<{
     isEnd: boolean;
     startPlay: boolean;
@@ -25,11 +25,11 @@ const VideoCarousel: React.FC = () => {
     isLastVideo: false,
     isPlaying: false,
   });
-  
+
   const [loadedData, setLoadedData] = useState<HTMLVideoElement[]>([]);
-  
+
   const { isEnd, startPlay, videoId, isLastVideo, isPlaying } = video;
-  
+
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to("#slider", {
@@ -67,8 +67,8 @@ const VideoCarousel: React.FC = () => {
 
             gsap.to(videoDivRef.current[videoId], {
               width: "60px",
-              minWidth: "60px"
-            })
+              minWidth: "60px",
+            });
 
             gsap.to(span[videoId], {
               width: `${currentProgress}%`,
@@ -82,7 +82,7 @@ const VideoCarousel: React.FC = () => {
             gsap.to(videoDivRef.current[videoId], {
               width: "8px",
               backgroundColor: "#fff",
-              duration: 0.5
+              duration: 0.5,
             });
             gsap.to(span[videoId], {
               backgroundColor: "#CECED1",
@@ -155,9 +155,9 @@ const VideoCarousel: React.FC = () => {
             <div
               id="slider"
               key={list.id}
-              className="inset-0 relative md:px-[45px]"
+              className="inset-0 relative md:px-[45px] touch-none"
             >
-              <div className="w-[100vw] md:w-[calc(100vw-105px)] xl:w-[1260px] h-full md:rounded-3xl bg-black overflow-hidden relative">
+              <div className="w-[100vw] md:w-[calc(100vw-105px)] xl:w-[1260px] h-full md:rounded-3xl bg-black overflow-hidden relative touch-none">
                 <video
                   id="video"
                   playsInline={true}
@@ -174,7 +174,8 @@ const VideoCarousel: React.FC = () => {
                   }
                   onLoadedMetadata={(e) => handleLoadedMetaData(i, e)}
                   className={`h-[560px] md:h-[680px] object-cover md:rounded-3xl z-10 ${
-                    list.id === 2 && "translate-x-14 md:translate-x-44 !object-contain"
+                    list.id === 2 &&
+                    "translate-x-14 md:translate-x-44 !object-contain"
                   }`}
                 >
                   <source src={list.video} type="video/mp4" />

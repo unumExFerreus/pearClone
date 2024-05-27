@@ -106,7 +106,7 @@ const Navbar = () => {
           </button>
 
           <div
-            className={`absolute inset-0 max-w-[100dvw] h-[100dvh] bg-[#161616] transition-all duration-[700ms] ease-in ${
+            className={`absolute inset-0 max-w-[100dvw] h-[100dvh] bg-[#161616] transition-all duration-[700ms] ${
               isMenuOpen
                 ? "visible opacity-100"
                 : "invisible h-[30dvh] opacity-0"

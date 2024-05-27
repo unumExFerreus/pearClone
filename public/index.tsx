@@ -10,6 +10,8 @@ import yellowImg from "./assets/images/yellow.jpg";
 import whiteImg from "./assets/images/white.jpg";
 import blackImg from "./assets/images/black.jpg";
 import blueImg from "./assets/images/blue.jpg";
+import explore1 from "./assets/images/explore1.jpg";
+import explore2 from "./assets/images/explore2.jpg";
 
 export {
   Logo,
@@ -24,4 +26,6 @@ export {
   blueImg,
   whiteImg,
   yellowImg,
+  explore1,
+  explore2,
 };
