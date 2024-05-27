@@ -15,7 +15,7 @@ const Chip = () => {
     gsap.from("#chip", {
       opacity: 0,
       scale: 2,
-      duration: 1.5,
+      duration: 1,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#chip",
@@ -123,7 +123,7 @@ const Chip = () => {
             className="text-[#868686] w-full px-[45px] md:px-[0px] pb-5 opacity-0 translate-y-[30px]"
           >
             New <br />
-            <span className="text-[#f5f5f5] text-5xl my-2">
+            <span className="text-[#f5f5f5] text-3xl md:text-5xl my-2">
               Pro-class GPU <br />
             </span>
             with 6 cores

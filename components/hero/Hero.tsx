@@ -2,6 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Link from "next/link";
 
 const Hero = () => {
   useGSAP(() => {
@@ -68,13 +69,14 @@ const Hero = () => {
         </div>
 
         <div className="absolute bottom-0 flex flex-col justify-end items-center mb-6 md:mb-20">
-          <a
+          <Link
             id="btn"
             className="w-fit bg-[#0071e3] text-white py-[0.7rem] px-6 mb-6 md:mb-8 rounded-full text-[1.063rem] leading-[1.2] font-normal tracking-[-0.022em] translate-y-[50px] opacity-0"
-            href="#"
+            href="/"
           >
             Buy
-          </a>
+          </Link>
+          
           <span
             id="textBtn"
             className="text-[#f5f5f5] text-xl md:text-[1.375rem] leading-[1.4] font-semibold tracking-[-0.011em] mb-5 translate-y-[50px] opacity-0"

@@ -7,6 +7,7 @@ import { watch } from "../../public/index";
 import { useGSAP } from "@gsap/react";
 
 import { animationTitle } from "@/utils/animations";
+import Link from "next/link";
 
 const Highlights = () => {
   useGSAP(() => {
@@ -40,8 +41,8 @@ const Highlights = () => {
 
         <div className="flex flex-col md:flex-row md:items-end">
           <span className="flex pr-7 link opacity-0 translate-y-[30px] md:mx-0">
-            <span className="mr-2 text-lg md:text-xl text-[#2997ff]">
-              Watch the film
+            <span className="mr-2 text-lg md:text-xl text-[#2997ff] cursor-pointer">
+              <Link href={"/"}>Watch the film</Link>
             </span>
             <Image
               src={watch}
@@ -50,8 +51,8 @@ const Highlights = () => {
             />
           </span>
           <span className="flex link opacity-0 translate-y-[30px] md:mx-0">
-            <span className="pr-2 text-lg md:text-xl text-[#2997ff]">
-              Watch the event
+            <span className="pr-2 text-lg md:text-xl text-[#2997ff] cursor-pointer">
+              <Link href={"/"}> Watch the event</Link>
             </span>
             <svg
               viewBox="0 0 7 11"

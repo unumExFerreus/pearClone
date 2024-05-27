@@ -20,6 +20,7 @@ export const animationVideo = (target, animationProps, scrollProps) => {
       trigger: target,
       start: "bottom center",
       end: "+=1700",
+      markers: true,
       ...scrollProps,
     },
   });
