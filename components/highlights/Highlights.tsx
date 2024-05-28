@@ -31,7 +31,7 @@ const Highlights = () => {
 
   return (
     <div className="w-full h-auto bg-[#101010]">
-      <div className="w-full container flex flex-col md:flex-row md:justify-between pt-[100px] xl:pt-[200px] pb-[38px] md:pb-[40px]">
+      <div className="w-full max-w-full container flex flex-col md:flex-row md:justify-between pt-[100px] xl:pt-[200px] pb-[38px] md:pb-[40px]">
         <h2
           id="title"
           className="text-3xl md:mx-0 pb-4 md:pb-0 md:text-6xl font-[1000] text-[#868686] opacity-0 translate-y-[30px]"

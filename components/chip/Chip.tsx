@@ -15,7 +15,7 @@ const Chip = () => {
     gsap.from("#chip", {
       opacity: 0,
       scale: 2,
-      duration: 1,
+      duration: 1.5,
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#chip",

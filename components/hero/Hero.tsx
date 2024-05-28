@@ -41,26 +41,15 @@ const Hero = () => {
         </h1>
 
         <div className="flex justify-center">
-          {/* <video
-            className="w-[97%] md:w-[65%] mb-10 md:mb-0"
-            src={
-              window.innerWidth > 760
-                ? "/videos/hero.mp4"
-                : "/videos/smallHero.mp4"
-            }
-            autoPlay
-            muted
-            playsInline={true}
-          ></video> */}
           <video
-            className="block md:hidden w-[97%] max-h-[50dvh] sm:max-h-full mb-10"
+            className="block sm:hidden w-[97%] max-h-[50dvh] sm:max-h-full mb-10"
             src="/videos/smallHero.mp4"
             autoPlay
             muted
             playsInline={true}
           />
           <video
-            className="hidden md:block w-[65%] mb-0"
+            className="hidden sm:block w-[65%] mb-0"
             src="/videos/hero.mp4"
             autoPlay
             muted
