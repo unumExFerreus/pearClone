@@ -20,7 +20,6 @@ const Chip = () => {
       scrollTrigger: {
         trigger: "#chip",
         start: "100% bottom",
-        markers: true
       },
     });
 
