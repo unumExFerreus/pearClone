@@ -19,7 +19,7 @@ const Chip = () => {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#chip",
-        start: "100% top",
+        start: "100% bottom",
         markers: true
       },
     });
