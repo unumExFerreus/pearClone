@@ -32,7 +32,7 @@ const Hero = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col justify-center items-center w-full h-full relative">
+      <div className="flex flex-col justify-center items-center w-full h-[100dvh] relative">
         <h1
           id="heroText"
           className="text-center text-[1.375rem] md:text-[1.75rem] leading-[1.14] font-semibold tracking-[-0.007em] text-[#BEB8AE] opacity-0 mb-4 md:mb-[-1.85rem] z-10"
@@ -42,7 +42,7 @@ const Hero = () => {
 
         <div className="flex justify-center">
           <video
-            className="block sm:hidden w-[97%] max-h-[50dvh] sm:max-h-full mb-10"
+            className="block sm:hidden w-[97%] max-h-[50dvh] sm:max-h-[100dvh] mb-10"
             src="/videos/smallHero.mp4"
             autoPlay
             muted
